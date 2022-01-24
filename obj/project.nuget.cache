@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "iYuOy3CTJrktOu51L2JG1kByBdf0E1lOKWdutrwg+F6u1+0tcU28TJ9GnqyH/9WjLCJlVjbd42h1PUIY16SAcQ==",
+  "success": true,
+  "projectFilePath": "/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/coterie-project.csproj",
+  "expectedPackageFiles": [
+    "/Users/veli/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/veli/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/veli/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/veli/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/veli/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/veli/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
