@@ -1,6 +1,6 @@
 namespace coterie_project;
 
-public class Applications
+public class Application
 {
     public string BusinessName { get; set; }
 

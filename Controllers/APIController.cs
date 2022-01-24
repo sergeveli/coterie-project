@@ -6,18 +6,6 @@ namespace coterie_project.Controllers;
 [Route("api")]
 public class APIController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
-    private readonly ILogger<APIController> _logger;
-
-    public APIController(ILogger<APIController> logger)
-    {
-        _logger = logger;
-    }
-
     [HttpGet("Applications")]
     public IEnumerable<WeatherForecast> Get()
     {
@@ -30,5 +18,21 @@ public class APIController : ControllerBase
         .ToArray();
     }
 
-    
+    [HttpPost("Applications")]
+
+    public IEnumerable<Application> GetApplications()
+    {
+            Application[] apps =  {
+                new Application {
+                    BusinessName = "",
+                    Industry = "",
+                    Email = "",
+                    AnnualSales = 9,
+                    AnnualPayroll = 13,
+                    Employees = 1300,
+                    ZipCode = "",
+                }
+            };
+                return apps;
+    }
 }
