@@ -5,24 +5,13 @@ namespace coterie_project.Controllers;
 [ApiController]
 [Route("api")]
 public class APIController : ControllerBase
+
 {
     [HttpGet("Applications")]
-    public IEnumerable<WeatherForecast> Get()
-    {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
-    }
-
-    [HttpPost("Applications")]
-
     public IEnumerable<Application> GetApplications()
+// {'BusinessName': 'PRE', 'Industry': 'Money', 'Email': 'pre@pre.com', 'AnnualSales': 1000000, 'AnnualPayroll': 1000000000, 'Employees': 13, 'ZipCode': '11375'}
     {
-            Application[] apps =  {
+        Application[] apps =  {
                 new Application {
                     BusinessName = "",
                     Industry = "",
@@ -33,6 +22,11 @@ public class APIController : ControllerBase
                     ZipCode = "",
                 }
             };
-                return apps;
+        return apps;
     }
+
+    [HttpPost("Applications")]
+    public void SaveApplication(Application app)(
+        
+    )
 }
