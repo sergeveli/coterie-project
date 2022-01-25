@@ -1,6 +1,22 @@
-import { Grid, TextField } from '@material-ui/core';
+import { Grid, TextField, withStyles, FormControl, Select, MenuItem, InputLabel } from '@material-ui/core';
 import React, {useState} from 'react';
+import useForm from './useForm';
 
+const styles = theme =>({
+    root: {
+        '& .MuiTextField-root': {
+            margin: theme.spacing(1),
+            minWidth: 230,
+        }
+    },  
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 230,
+    }, 
+    smMargin: {
+      margin: theme.spacing(1)
+    }
+})
 const initialFieldValues = {
   businessName: '',
   industry: '',
@@ -12,21 +28,22 @@ const initialFieldValues = {
 
 }
 
-const ProfileForm = (props) => {
+const ProfileForm = (classes, ...props) => {
 
-  const {values, setValues} = useState(initialFieldValues)
+  const {
+    values, 
+    setValues,
+    handleInputChange
+  } = useForm(initialFieldValues)
 
-  const handleInputChange = e =>{
-    const {name, value} = e.target
-    setValues({
-      ...values,
-      [name]: value
-
-    })
-  }
+  // const inputLabel = React.useRef(null);
+  // const [labelWidth, setLabelWidth] = React.useState(0);
+  // React.useEffect(()=>{
+  //   setLabelWidth(inputLabel.current.offsetWidth);
+  // }, [])
 
   return (
-      <form autoComplete='off' noValidate>
+      <form autoComplete='off' noValidate className = {classes.root}>
         <Grid container>
           <Grid item xs={6}>
             <TextField
@@ -50,13 +67,21 @@ const ProfileForm = (props) => {
             value={values.email}
             onChange={handleInputChange}
             />
-            <TextField
-            name='annualSales'
-            variant='outlined'
-            label='Annual Sales'
-            value={values.annualSales}
-            onChange={handleInputChange}
-            />
+            <FormControl variant='outlined' 
+            className={classes.formControl}>
+              <InputLabel>Annual Sales</InputLabel>
+              <Select
+              name='annualSales'
+              value={values.annualSales}
+              onChange={handleInputChange}>
+                <MenuItem value=''>Select Number</MenuItem>
+                <MenuItem value='$50k'>$50k</MenuItem>
+                <MenuItem value='$75k'>$75k</MenuItem>
+                <MenuItem value='$100k'>$100k</MenuItem>
+                <MenuItem value='$150k'>$150k</MenuItem>
+                <MenuItem value='$200k'>$200k</MenuItem>
+              </Select>
+            </FormControl>
             <TextField
             name='annualPayroll'
             variant='outlined'
