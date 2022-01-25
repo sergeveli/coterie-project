@@ -1,23 +1,26 @@
-import { useState, useEffect } from "react"
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-const useForm = (initialFieldValues) => {
+const useForm = (initialFieldValues, validate) => {
     const [values, setValues] = useState(initialFieldValues)
+    const [errors, setErrors] = useState({})
 
     const handleInputChange = e => {
     const {name, value} = e.target
+    const fieldValue = {[name]: value}
         setValues({
         ...values,
-        [name]: value
-
+        ...fieldValue
     })
-    }
+    validate(fieldValue)
+}
 
     return {
         values,
         setValues,
-        handleInputChange
+        errors,
+        setErrors,
+        handleInputChange,
     };
 }
 
-export default useForm
+export default useForm;
