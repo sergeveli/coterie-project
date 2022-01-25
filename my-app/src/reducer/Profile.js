@@ -4,7 +4,7 @@ const initialState = {
     list:[]
 }
 
-export const Profile = (state = initialState,action) =>{
+export const Profile = (state = initialState,action) => {
     switch (action.type){
         case ACTION_TYPES.FETCH_ALL:
             return{
