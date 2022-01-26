@@ -1,5 +1,7 @@
 import { Grid, TextField, withStyles, FormControl, Select, MenuItem, InputLabel, Button, FormHelperText } from '@material-ui/core';
 import React, {useState} from 'react';
+import * as actions from "../actions/Profile"
+import { connect } from 'react-redux';
 import useForm from './useForm';
 
 const styles = theme =>({
@@ -163,7 +165,9 @@ const ProfileForm = (classes, ...props) => {
             <div>
               <Button
               variant="contained"
-              color="primary">
+              color="primary"
+              type="submit"
+              className={classes.smMargin}>
                 Submit
               </Button>
             </div>            
@@ -173,4 +177,13 @@ const ProfileForm = (classes, ...props) => {
   );
 };
 
-export default ProfileForm;
+const mapStateToProps = state =>({
+    profilesList: state.Profile.list
+})
+
+const mapActionToProps = {
+  createProfile: actions.create,
+  fetchAllProfiles: actions.fetchAll
+}
+
+export default connect(mapStateToProps, mapActionToProps)(withStyles(styles)(ProfileForm));
