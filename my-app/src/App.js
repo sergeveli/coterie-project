@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { store } from './actions/store';
 import {Provider} from 'react-redux'
 import Profiles from './components/Profiles';

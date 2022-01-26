@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = 'http://localhost:5273/api/Applications'
 
-export default {
+ const api = {
     Profile(url=baseUrl){
         return {
             fetchAll: () => axios.get(url),
@@ -10,4 +10,6 @@ export default {
         }
     }
 }
+
+export default api;
 
