@@ -1,4 +1,4 @@
-import { Grid, TableContainer, Paper, TableBody, TableRow, TableCell, TableHead, withStyles } from '@material-ui/core';
+import { Grid, TableContainer, Paper, TableBody, TableRow, TableCell, TableHead, withStyles, Table } from '@material-ui/core';
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/Profile';
@@ -26,6 +26,7 @@ const Profiles = ({classes, ...props}) => {
       </Grid>
       <Grid item xs={6}>
         <TableContainer>
+          <Table>
           <TableHead>
             <TableRow>
               <TableCell>Business Name:</TableCell>
@@ -52,6 +53,7 @@ const Profiles = ({classes, ...props}) => {
               })
             }
           </TableBody>
+          </Table>
         </TableContainer>
       </Grid>
     </Grid>
