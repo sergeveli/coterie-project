@@ -25,3 +25,9 @@
 /Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/obj/Debug/net6.0/ref/coterie-project.dll
 /Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/obj/Debug/net6.0/coterie-project.pdb
 /Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/obj/Debug/net6.0/coterie-project.genruntimeconfig.cache
+/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/bin/Debug/net6.0/my-app/package-lock.json
+/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/bin/Debug/net6.0/my-app/package.json
+/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/bin/Debug/net6.0/my-app/public/manifest.json
+/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/bin/Debug/net6.0/System.Net.Http.Formatting.dll
+/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/veli/Desktop/AppAcademy/soloProgramming/coterie-project/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
